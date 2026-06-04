@@ -37,6 +37,8 @@ static void draw_top(lv_obj_t *widget, lv_color_t cbuf[], const struct status_st
 
     lv_draw_label_dsc_t label_dsc;
     init_label_dsc(&label_dsc, LVGL_FOREGROUND, &lv_font_montserrat_16, LV_TEXT_ALIGN_RIGHT);
+    lv_draw_label_dsc_t label_dsc_battery;
+    init_label_dsc(&label_dsc_battery, LVGL_FOREGROUND, &lv_font_unscii_8, LV_TEXT_ALIGN_CENTER);
     lv_draw_rect_dsc_t rect_black_dsc;
     init_rect_dsc(&rect_black_dsc, LVGL_BACKGROUND);
 
@@ -45,6 +47,11 @@ static void draw_top(lv_obj_t *widget, lv_color_t cbuf[], const struct status_st
 
     // Draw battery
     draw_battery(canvas, state);
+
+    // Draw battery percentage under the battery icon.
+    char battery_text[6] = {};
+    snprintf(battery_text, sizeof(battery_text), "%u%%", state->battery);
+    lv_canvas_draw_text(canvas, 0, 16, 34, &label_dsc_battery, battery_text);
 
     // Draw output status
     lv_canvas_draw_text(canvas, 0, 0, CANVAS_SIZE, &label_dsc,
