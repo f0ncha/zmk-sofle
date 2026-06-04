@@ -524,5 +524,9 @@ combos:
 - p: [14, 28, 40]
   k: '&soft_off'
   l: [ADMIN]
+  a: bottom
+  o: 0.45
 - p: [56, 60]
   k: {t: ADMIN, s: '$$mdi:toggle-switch$$'}
+  a: bottom
+  o: 0.55

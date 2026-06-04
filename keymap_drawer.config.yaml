@@ -20,10 +20,15 @@ draw_config:
     /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
 
     svg.keymap {
+      background: #f7f8fb;
       font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
       font-size: 12px;
       font-weight: bold;
       text-rendering: optimizeLegibility;
+    }
+
+    svg.keymap text {
+      fill: #1f2933;
     }
 
     /* Color accent for held keys */
@@ -535,6 +540,12 @@ parse_config:
       hold: zoom
 
   zmk_combos:
+    softoff:
+      align: bottom
+      offset: 0.45
+    admin_layer:
+      align: bottom
+      offset: 0.55
     combo_to_2:
       align: top
     combo_to_3:
