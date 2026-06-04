@@ -118,6 +118,15 @@ parse_config:
 
   raw_binding_map:
     # Layers
+    "&lt LAYER_FN1 F19":
+      tap: F19
+      hold: FN1
+    "&lt LAYER_FN2 F20":
+      tap: F20
+      hold: FN2
+    "&tog LAYER_ADMIN":
+      tap: ADMIN
+      shifted: $$mdi:toggle-switch$$
     "&ltq 1 BACKSPACE":
       tap:  $$mdi:backspace$$
       hold: '$$mdi:navigation-variant$$'
