@@ -19,10 +19,10 @@ manifest:
       revision: main
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3.0
       import: app/west.yml
     - name: nice-view-gem
       remote: m165437
-      revision: main
+      revision: v0.3.0
   self:
     path: boards
