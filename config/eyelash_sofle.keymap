@@ -4,10 +4,10 @@
 #define LAYER_BASE     0
 #define LAYER_FN1      1
 #define LAYER_FN2      2
-#define LAYER_CUSTOM1  3
-#define LAYER_CUSTOM2  4
-#define LAYER_CUSTOM3  5
-#define LAYER_CUSTOM4  6
+#define LAYER_FN3      3
+#define LAYER_FN4      4
+#define LAYER_CUSTOM1  5
+#define LAYER_CUSTOM2  6
 #define LAYER_ADMIN    7
 
 #include <input/processors.dtsi>
@@ -163,7 +163,7 @@
 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
 
-            display-name = "CUSTOM3";
+            display-name = "CUSTOM1";
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
@@ -176,7 +176,7 @@
 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
 
-            display-name = "CUSTOM4";
+            display-name = "CUSTOM2";
             sensor-bindings = <&scroll_encoder>;
         };
 

@@ -129,6 +129,12 @@ parse_config:
     "&lt LAYER_FN2 F20":
       tap: F20
       hold: FN2
+    "&mo LAYER_FN3":
+      hold: FN3
+      type: held
+    "&mo LAYER_FN4":
+      hold: FN4
+      type: held
     "&tog LAYER_ADMIN":
       tap: ADMIN
       shifted: $$mdi:toggle-switch$$
