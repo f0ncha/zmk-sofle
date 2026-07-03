@@ -20,10 +20,15 @@ draw_config:
     /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
 
     svg.keymap {
+      background: #f7f8fb;
       font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
       font-size: 12px;
       font-weight: bold;
       text-rendering: optimizeLegibility;
+    }
+
+    svg.keymap text {
+      fill: #1f2933;
     }
 
     /* Color accent for held keys */
@@ -118,6 +123,21 @@ parse_config:
 
   raw_binding_map:
     # Layers
+    "&lt LAYER_FN1 F19":
+      tap: F19
+      hold: FN1
+    "&lt LAYER_FN2 F20":
+      tap: F20
+      hold: FN2
+    "&mo LAYER_FN3":
+      hold: FN3
+      type: held
+    "&mo LAYER_FN4":
+      hold: FN4
+      type: held
+    "&tog LAYER_ADMIN":
+      tap: ADMIN
+      shifted: $$mdi:toggle-switch$$
     "&ltq 1 BACKSPACE":
       tap:  $$mdi:backspace$$
       hold: '$$mdi:navigation-variant$$'
@@ -526,6 +546,12 @@ parse_config:
       hold: zoom
 
   zmk_combos:
+    softoff:
+      align: bottom
+      offset: 0.45
+    admin_layer:
+      align: bottom
+      offset: 0.55
     combo_to_2:
       align: top
     combo_to_3:
